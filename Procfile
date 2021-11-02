@@ -1,1 +1,1 @@
-web: gunicorn --pid /tmp/my_gunucorn.pid script_for_webhook:app
+web: GUNICORN_CMD_ARGS="--pid /tmp/my_gunucorn.pid" gunicorn script_for_webhook:app

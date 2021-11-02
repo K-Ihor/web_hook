@@ -1,1 +1,1 @@
-web: gunicorn script_for_webhook:app
+web: gunicorn --pid /tmp/my_gunucorn.pid script_for_webhook:app

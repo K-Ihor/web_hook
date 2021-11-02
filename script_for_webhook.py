@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 import json
 
@@ -10,7 +12,14 @@ def foo():
     print(f"#############################################/n{data}/n########################")
     print("New commit by: {}".format(data['commits'][0]['author']['name']))
     print("####  OK  #####")
+    os.system('pkill -F HUP /tmp/my_gunucorn.pid')
     return "OK"
+
+
+@app.route('/reload')
+def reload():
+    app.run()
+    return 'Hello World!'
 
 
 # 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

@@ -1,1 +1,1 @@
-web: gunicorn -p app.pid script_for_webhook.wsgi.app
+web: gunicorn script_for_webhook:app

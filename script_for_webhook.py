@@ -23,7 +23,7 @@ def reload():
 
 
 # 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
-# web: gunicorn script_for_webhook:app
+
 
 if __name__ == "__main__":
     app.run()

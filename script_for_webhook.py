@@ -12,8 +12,7 @@ def foo():
     print(f"#############################################/n{data}/n########################")
     print("New commit by: {}".format(data['commits'][0]['author']['name']))
     print("####  OK  #####")
-    os.system('pkill -F HUP tmp/pids/nginx.pid')
-
+    os.system('pkill -F HUP /var/run/gunicorn.pid')
     return "OK"
 
 
